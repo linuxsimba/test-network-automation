@@ -4,8 +4,8 @@
   vars:
     cli:
       host: "{{ inventory_hostname }}"
-      username: ansible
-      password: 1q2w3e4r5t!
+      username: "{{ vault_switch_username }}"
+      password: "{{ vault_switch_password }}"
 
   tasks:
       - name: run show version
