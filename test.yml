@@ -10,5 +10,9 @@
   tasks:
       - name: run show version
         ios_command:
-          commands: show version
+          commands: "show version"
           provider: "{{ cli }}"
+        register: show_version
+
+      - name: debug me
+        debug: var=show_version
