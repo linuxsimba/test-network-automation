@@ -1,0 +1,14 @@
+---
+- hosts: switches
+  connection: local
+  vars:
+    cli:
+      host: "{{ inventory_hostname }}"
+      username: ansible
+      password: 1q2w3e4r5t!
+
+  tasks:
+      - name: run show version
+        ios_command:
+          commands: show version
+          provider: "{{ cli }}"
