@@ -14,5 +14,5 @@
           provider: "{{ cli }}"
         register: show_version
 
-      - name: debug me
+      - name: print the show debug output
         debug: var=show_version
