@@ -12,7 +12,11 @@
       - name: run show version
         nxos_command:
           commands: "show version"
-          provider: "{{ cli }}"
+          host: "{{ inventory_hostname }}"
+          username: "{{ vault_switch_username }}"
+          password: "{{ vault_switch_password }}"
+          transport: cli
+
         register: show_version
 
       - name: print the show debug output
