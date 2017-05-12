@@ -4,8 +4,9 @@
   vars:
     cli:
       host: "{{ inventory_hostname }}"
-      username: "{{ vault_switch_username }}"
-      password: "{{ vault_switch_password }}"
+      username: admin
+      password: admin
+      transport: cli
 
   tasks:
       - name: run show version
