@@ -3,7 +3,7 @@
   connection: local
   vars:
     cli:
-      host: "{{ ansible_hostname }}"
+      host: "{{ inventory_hostname }}"
       username: admin
       password: admin
       transport: cli
