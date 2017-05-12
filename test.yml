@@ -11,6 +11,7 @@
       - name: run show version
         nxos_command:
           commands: "show version"
+          host: "{{ inventory_hostname }}"
           username: admin
           password: admin
         register: show_version
